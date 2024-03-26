@@ -33,12 +33,12 @@ Dataset with the content and title of articles most of them in Greek language sp
 
 
     # go to your home dir
-    git clone https://github.com/jvario/StackOverflow-Tag-Classification.git
-    cd StackOverflow-Tag-Classification
+    git clone https://github.com/jvario/topic-classification.git
+    cd topic-classification
 
     # build the image
-    docker build -t docker-tag-clf -f Dockerfile . 
-    docker run -p 8888:8888 docker-tag-clf
+    docker build -t my-flask-api .
+    docker run -d -p 5000:5000 my-flask-api
     
 
 # II.  Pipeline:
