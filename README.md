@@ -21,7 +21,7 @@ following the method of your choice. The schema explanation is given in
 “schema_explained.txt”.
 
 
-#### Dataset - StackSample: 10% of Stack Overflow Q&A:
+#### Dataset:
 Dataset with the content and title of articles most of them in Greek language splitted in two csv's files. 
 
 - TrainData.csv : This file includes the training data for our models
