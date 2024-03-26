@@ -39,8 +39,10 @@ Dataset with the content and title of articles most of them in Greek language sp
     # build the image
     docker build -t my-flask-api .
     docker run -d -p 5000:5000 my-flask-api
-    
 
+  #### api - calls
+ - **/topic_clf/LoadTopicModel?model_name=SGD** :  loading a model and evaluating it
+ - **/topic_clf/TrainTopicModel** : training topic models
 # II.  Pipeline:
 
 #### EDA:
