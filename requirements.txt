@@ -1,0 +1,14 @@
+pandas
+matplotlib
+seaborn
+nltk
+tqdm
+scikit-learn
+numpy
+flask
+flask_restful
+joblib
+spacy
+beautifulsoup4
+langdetect
+unidecode
