@@ -129,13 +129,16 @@ def train_evaluate_model():
         "Linear SVM": LinearSVC(),
         "SGD": SGDClassifier(n_jobs=-1)
     }
-
+    resp_lst = []
     for name, clf in classifiers.items():
         clf.fit(X_train, y_train)
         y_pred = clf.predict(X_test)
-        evaluate_model(y_test, y_pred, name, y_classes)
+        resp = evaluate_model(y_test, y_pred, name, y_classes)
         filename = 'models/' + name + '.sav'
         joblib.dump(clf, filename)
+        resp_lst.append(resp)
+
+    return resp_lst, 200
 
 
 def load_model(model_name):
@@ -150,8 +153,9 @@ def load_model(model_name):
     y_test, y_classes = label_binarazation(y_test)
 
     y_pred = loaded_model.predict(X_test)
-    evaluate_model(y_test, y_pred, model_name, y_classes)
+    resp = evaluate_model(y_test, y_pred, model_name, y_classes)
 
+    return resp, 200
 
 def train_feature_extraction(df):
 
@@ -257,3 +261,5 @@ def evaluate_model(y_test, y_pred, model_name, y_classes):
                              columns=y_classes)
     metric_df.to_csv("models/models_results/" + str(model_name) + "_metrics.xlsx")
     print(metric_df)
+    resp = {"Accuracy": acc, "Jaccard Score": jacc_sc, "Classifier": str(model_name)}
+    return resp
