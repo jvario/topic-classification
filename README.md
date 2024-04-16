@@ -6,28 +6,12 @@
 The initial development phase of the code base involves implementing a model for Emotion classification based on given dataset:
 
 a) Baseline Emotion Prediction Model with Classic Classifiers:
+- Data Preprocessing: Cleaning and preprocessing data from provided datasets.
+- Feature Engineering: Extracting relevant features for classic classifiers.
+- Model Selection: Choosing classic classifiers like Logistic Regression, Naive Bayes, etc.
+- Model Training: Training classifiers and evaluating performance metrics.
 
-  - Data Preprocessing: Cleaning and preprocessing data from provided datasets.
-  - Feature Engineering: Extracting relevant features for classic classifiers.
-  - Model Selection: Choosing classic classifiers like Logistic Regression, Naive Bayes, etc.
-  - Model Training: Training classifiers and evaluating performance metrics.
-    
-b) Generation using pretrained LLMs based on the predicted tag of the model:
-
-  - Prediction Model Integration: After training the baseline topic prediction model using classic classifiers, integrate it with the LLM-based response generation module.
-
-  - Pretrained LLMs Selection: Choose suitable pretrained Large Language Models (LLMs) such as GPT, BERT, or XLNet for response generation. These models possess strong language understanding capabilities and can generate coherent and contextually relevant text.
-
-  - Tag-to-Text Mapping: Develop a mapping mechanism to link predicted topic tags from the baseline model to corresponding text prompts for the LLM. Each topic tag predicted by the baseline model will be associated with a set of text prompts or templates tailored to that specific topic.
-
-  - Contextual Prompt Generation: Generate contextual prompts for the LLM based on the predicted topic tag and any additional context from the user input. These prompts provide relevant information to guide the LLM in generating coherent responses aligned with the predicted topic.
-
-  - Response Generation: Utilize the pretrained LLM to generate responses based on the provided prompts and the context of the conversation. The LLM generates text sequences that are grammatically correct and contextually coherent, incorporating the predicted topic as a guiding factor.
-
-  - UI Chatbot Development: Create a user interface (UI) for the chatbot using web technologies like HTML, CSS, and JavaScript. The UI will allow users to interact with the chatbot seamlessly.
-
-  - Flask API Integration: Develop Flask APIs to connect the UI chatbot with the backend system. These APIs handle user requests, process them through the topic prediction and response generation modules, and return the generated responses to the UI.
-  - 
+b) Data Analysis: You are given a sample of real-time bidding data that correspond withour programmatic advertising solution. You are required to perform dataanalysis, identify and present any insights you are able to derive from the data,following the method of your choice. The schema explanation is given in “schema_explained.txt”.
 
 #### Dataset:
 Dataset with the content and title of articles most of them in Greek language splitted in two csv's files. 
