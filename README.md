@@ -3,15 +3,23 @@
 # I.  Introduction:
 
 #### Project Overview:
-The initial development phase of the code base involves implementing a model for Emotion classification based on given dataset:
+The initial development phase of the code base involves implementing a model for topic classification based on given dataset:
 
-a) Baseline Emotion Prediction Model with Classic Classifiers:
-- Data Preprocessing: Cleaning and preprocessing data from provided datasets.
-- Feature Engineering: Extracting relevant features for classic classifiers.
-- Model Selection: Choosing classic classifiers like Logistic Regression, Naive Bayes, etc.
-- Model Training: Training classifiers and evaluating performance metrics.
+a) Baseline Topic Prediction Model with Classic Classifiers:
 
-b) Data Analysis: You are given a sample of real-time bidding data that correspond withour programmatic advertising solution. You are required to perform dataanalysis, identify and present any insights you are able to derive from the data,following the method of your choice. The schema explanation is given in “schema_explained.txt”.
+  - Data Preprocessing: Cleaning and preprocessing data from provided datasets.
+  - Feature Engineering: Extracting relevant features for classic classifiers.
+  - Model Selection: Choosing classic classifiers like Logistic Regression, Naive Bayes, etc.
+  - Model Training: Training classifiers and evaluating performance metrics.
+    
+b) Data Analysis:
+
+ You are given a sample of real-time bidding data that correspond with
+our programmatic advertising solution. You are required to perform data
+analysis, identify and present any insights you are able to derive from the data,
+following the method of your choice. The schema explanation is given in
+“schema_explained.txt”.
+
 
 #### Dataset:
 Dataset with the content and title of articles most of them in Greek language splitted in two csv's files. 
@@ -71,10 +79,10 @@ changes to your modeling approach? Describe any changes you had to make.
 
 # III.  Results:
 
-| Model | Sample Size | Accuracy |
-|-------|-------------|----------|
-| SVM   | ~2500       | 0.68    | 
-| SGD   | ~2500       | 0.68     |
+| Model | Sample Size | Accuracy | Jaccard Score |
+|-------|-------------|----------|---------------|
+| SVM   | ~2500       | 0.68     | 0.55          |
+| SGD   | ~2500       | 0.68     | 0.56          |
 
 This table represents the evaluation results for different models based on dataset. The metrics include Accuracy, Jaccard score.
 
