@@ -73,8 +73,8 @@ changes to your modeling approach? Describe any changes you had to make.
 
 | Model | Sample Size | Accuracy |
 |-------|-------------|----------|
-| SVM   | ~2500       | 0.88    | 
-| SGD   | ~2500       | 0.88     |
+| SVM   | ~2500       | 0.68    | 
+| SGD   | ~2500       | 0.68     |
 
 This table represents the evaluation results for different models based on dataset. The metrics include Accuracy, Jaccard score.
 
